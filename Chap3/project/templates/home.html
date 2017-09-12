@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>天气查询系统</title>
+  </head>
+  <body>
+    <h1 align="middle">天气查询系统</h1>
+    <form action="/user" method=["POST", "GET"] align="middle">城市：
+      <input name="city" type="text" />
+      <input type="submit" name="query" value="查询">
+      <input type="submit" name="history" value="历史">
+      <input type="submit" name="help" value="帮助">
+    </form>
+    {% if result %}
+    {% for i in result %}
+    <p align="middle">{{ i }}</p>
+    {% endfor %}
+    {% endif %}
+  </body>
+</html>
